@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; /* Adjust the height of the border */
+  background-image: url('news.jpg'); /* URL of your border image */
+  background-size: cover;
+  background-position: center;
+  z-index: 1; /* Ensure the border image is above other content */
+}
+
+.container {
+  position: relative;
+  z-index: 2; /* Ensure the content is above the border image */
+}
+.news-icon {
+  position: absolute;
+  top: 10px; /* Adjust the positioning of the icon vertically */
+  left: 10px; /* Adjust the positioning of the icon horizontally */
+  width: 70px; /* Adjust the size of the icon */
+  height: 70px; /* Adjust the size of the icon */
+  background-image: url('news-icons.jpg'); /* URL of your news icon image */
+  background-size: cover;
+  background-position: center;
+  z-index: 2; /* Ensure the icon is above the border image */
+}
+
+.container {
+  position: relative;
+  z-index: 3; /* Ensure the content is above the border image and icon */
+}
